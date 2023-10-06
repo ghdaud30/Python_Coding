@@ -1,6 +1,6 @@
-k = 3
-m = 4
-score = 	[1, 2, 3, 1, 2, 3, 1]	
+k = 4
+m = 3
+score = [4, 1, 2, 2, 4, 4, 4, 4, 1, 2, 4, 2]
 
 def 과일장수(k,m,score):
     answer = 0
@@ -20,7 +20,7 @@ def 과일장수(k,m,score):
     
     # min 함수 이용하여 리스트의 최소값 구하기
     for i in range(len(apple)):
-        answer +=  min(apple[i]) * m
+        answer +=  apple[i][-1] * m
 
 
     # for i in range(len(apple)):
