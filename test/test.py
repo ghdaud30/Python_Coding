@@ -13,7 +13,9 @@ sys.path.append("C:/Users/ghdau/Desktop/python_coding/python/Level_1")
 # from 숫자_짝꿍 import 숫자_짝꿍
 #from 과일장수 import 과일장수
 #from 시저암호 import 시저암호
-from 기능개발 import solution
+#from 기능개발 import solution
+from 신고결과받기 import solution
+
 class Test(unittest.TestCase):
     def test_dict(self):
         # answer1 = examine_dict(["kali", "mari", "don"],[11, 1, 55],[["kali", "mari", "don"], ["pony", "tom", "teddy"], ["con", "mona", "don"]])
@@ -33,7 +35,8 @@ class Test(unittest.TestCase):
         #self.assertEqual(숫자_짝꿍("100","123450"),"10")
         #self.assertEqual(과일장수(4,3,[4, 1, 2, 2, 4, 4, 4, 4, 1, 2, 4, 2]),33)
         #self.assertEqual(시저암호("a B z",4),"e F d")
-        self.assertEqual(solution([93, 30, 55],[1, 30, 5]),[2,1])
+        #self.assertEqual(solution([93, 30, 55],[1, 30, 5]),[2,1])
+        self.assertEqual(solution(["muzi", "frodo", "apeach", "neo"],["muzi frodo","apeach frodo","frodo neo","muzi neo","apeach muzi"],2),[2,1,1,0])
 
 
 
