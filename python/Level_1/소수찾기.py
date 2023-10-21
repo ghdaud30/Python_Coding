@@ -5,7 +5,7 @@ n = 5
 def solution(n):
     answer = 0
     
-    prime = [True for _ in range(n+1)]
+    prime = [True] * (n + 1)
     
     for i in range(2, int(math.sqrt(n)) + 1):
         if(prime[2]):
