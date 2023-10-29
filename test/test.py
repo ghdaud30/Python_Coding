@@ -15,8 +15,9 @@ sys.path.append("C:/Users/ghdau/Desktop/python_coding/python/Level_1")
 #from 시저암호 import 시저암호
 #from 기능개발 import solution
 # from 신고결과받기 import solution
-from 비밀지도 import solution
-from 신규아이디추천 import solution
+# from 비밀지도 import solution
+# from 신규아이디추천 import solution
+from 서울에서_김서방_찾기 import solution
 
 class Test(unittest.TestCase):
     def test_dict(self):
@@ -40,7 +41,8 @@ class Test(unittest.TestCase):
         #self.assertEqual(solution([93, 30, 55],[1, 30, 5]),[2,1])
         #self.assertEqual(solution(["muzi", "frodo", "apeach", "neo"],["muzi frodo","apeach frodo","frodo neo","muzi neo","apeach muzi"],2),[2,1,1,0])
         # self.assertEqual(solution(5,[9, 20, 28, 18, 11],[30, 1, 21, 17, 28]),["#####","# # #", "### #", "# ##", "#####"])
-        self.assertEqual(solution("abcdefghijklmn.p"),"abcdefghijklmn")
+        # self.assertEqual(solution("abcdefghijklmn.p"),"abcdefghijklmn")
+        self.assertEqual(solution(["Jane", "Kim"]),"김서방은 1에 있다")
 
 
 
