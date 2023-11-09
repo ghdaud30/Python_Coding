@@ -1,35 +1,34 @@
-n = 7
-lost = [2,4]
-reserve = [1,3]
+n = 5
+lost = [2,3,5,1]
+reserve = [1]
 
-def uniform(n, lost, reserve):
-    count = 0
-    total = []
-    ex = []
+def solution(n, lost, reserve):
+    answer = 0
+    num = []
+    
+    lost_set = set(lost)
+    reserve_set = set(reserve)
+    
+    common = list(lost_set.intersection(reserve_set))
+                
+    for i in common:
+        lost.remove(i)
+        reserve.remove(i)
+    
+    for i in range(1, n + 1):
+        if(i not in lost):
+            answer += 1
+        elif(i in lost and i in reserve):
+            reserve.remove(i)
+            answer += 1
+        else:            
+            if(i - 1 in reserve):
+                reserve.remove(i-1)
+                answer += 1
+            elif(i + 1 in reserve):
+                reserve.remove(i+1)
+                answer += 1
+        
+    return answer
 
-    for i in range(1,n+1):
-        if(i not in lost and i not in reserve):
-            total.append(i)
-    print(total)
-    count += len(total)
-
-    for i in reserve:
-        if i in lost:
-            continue
-        else:
-            count += 1
-
-    for i in lost:
-
-        pre = i - 1
-        next = i + 1
-        if(pre in reserve):
-            count += 1
-            reserve.remove(pre)
-        elif(next in reserve):
-            count += 1
-            reserve.remove(next)
-            
-    return count
-
-print(uniform(n, lost, reserve))
+print(solution(n, lost, reserve))
